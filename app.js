@@ -17,18 +17,6 @@ app.use(session({
 
 app.use(express.urlencoded({extended: true}))
 
-//Eksempel for å vise når en cookie blir satt
-
-// app.get("", (req, res) => {
-//     console.log(req.session)
-//     if (req.session.visits == undefined) {
-//         req.session.visits = 1
-//     } else {
-//         req.session.visits++
-//     }
-    
-//     res.send("Antall besøkende: " + req.session.visits)
-// })
 
 app.get("/registrer", (req, res) => {
     res.sendFile(path.join(__dirname, "/registrer.html"))
